@@ -1,0 +1,84 @@
+.example-picker{margin-bottom:22px}
+.example-picker>.card-heading{margin-bottom:8px}
+.example-picker>p{font-size:13px;color:var(--muted);margin-bottom:17px}
+.example-picker>.field{max-width:650px}
+.example-picker__selected{display:flex;align-items:flex-start;gap:9px;color:#28734f;font-size:12px;line-height:1.7;margin-top:14px}
+.example-picker__selected>svg{flex:none;margin-top:2px}
+.example-preview{margin-top:16px;border-top:1px solid var(--border);padding-top:14px}
+.example-preview>summary{color:var(--green);font-size:13px;font-weight:600;cursor:pointer;width:fit-content}
+.example-preview>.technician-scene{max-width:650px;margin-top:16px;box-shadow:none}
+.technician-scene { overflow:hidden; }
+.technician-scene__heading{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.technician-scene__eyebrow{display:block;font-size:11px;color:var(--green);font-weight:700;margin-bottom:6px}
+.technician-scene__heading h2{font-size:18px}
+.technician-scene__controls{display:flex;gap:3px}
+.technician-scene__controls .icon-button{min-width:32px;padding:6px}
+.work-scene{margin:20px 0 12px;border:1px solid #dcefe4;border-radius:13px;background:linear-gradient(155deg,#f4fcf7,#eaf8f1);overflow:hidden}
+.work-scene__drawing{position:relative;height:215px;max-width:500px;margin:auto;isolation:isolate}
+.work-scene__wall-line{position:absolute;left:9%;right:9%;bottom:43px;height:1px;background:#ccdfd3}
+.work-scene__floor{position:absolute;left:12%;right:10%;bottom:31px;height:13px;background:#dcefe3;border-radius:50%}
+.scene-technician{position:absolute;left:22%;bottom:45px;width:73px;height:143px;z-index:3;transition:transform 700ms ease}
+.scene-technician__head{position:absolute;left:22px;top:3px;height:33px;width:28px;border-radius:11px 11px 12px 12px;background:#e8b991;z-index:4}
+.scene-technician__head:before{content:'';position:absolute;left:-3px;right:-3px;top:-4px;height:13px;background:#263f3b;border-radius:14px 13px 3px 3px;transform:rotate(-6deg)}
+.scene-technician__head:after{content:'';position:absolute;right:-3px;top:14px;width:6px;height:8px;border-radius:4px;background:#e8b991}
+.scene-technician__head i{position:absolute;right:5px;top:15px;width:3px;height:3px;border-radius:50%;background:#28443b}
+.scene-technician__body{position:absolute;left:13px;top:37px;width:46px;height:56px;border-radius:12px 13px 5px 5px;background:#078b54;z-index:2;border-top:4px solid #c7f0db}
+.scene-technician__body:after{content:'';position:absolute;right:7px;top:15px;width:12px;height:10px;border:1px solid #ffffff60;border-radius:2px}
+.scene-technician__arm{position:absolute;top:43px;width:14px;height:49px;border-radius:8px;background:#07935a;transform-origin:7px 7px;z-index:3}
+.scene-technician__arm:after{content:'';position:absolute;bottom:-4px;left:1px;width:12px;height:15px;background:#e8b991;border-radius:7px}
+.scene-technician__arm--front{right:8px;transform:rotate(-25deg)}
+.scene-technician__arm--front svg{position:absolute;bottom:-19px;left:3px;color:#4b6770;z-index:2;transform:rotate(24deg)}
+.scene-technician__arm--back{left:8px;z-index:1;transform:rotate(16deg)}
+.scene-technician__leg{position:absolute;top:88px;width:18px;height:47px;background:#294957;border-radius:2px 2px 5px 5px;transform-origin:top center;z-index:1}
+.scene-technician__leg:after{content:'';position:absolute;bottom:-5px;left:-1px;width:25px;height:10px;background:#183832;border-radius:5px}
+.scene-technician__leg--left{left:15px;transform:rotate(6deg)}
+.scene-technician__leg--right{left:39px;transform:rotate(-6deg)}
+.work-scene--step-0 .scene-technician{animation:technician-approach 2800ms ease-in-out both}
+.work-scene--step-0 .scene-technician__leg--left{animation:technician-walk 500ms ease-in-out infinite alternate}
+.work-scene--step-0 .scene-technician__leg--right{animation:technician-walk 500ms ease-in-out infinite alternate-reverse}
+.work-scene--step-1 .scene-technician,.work-scene--step-2 .scene-technician{transform:translateX(37px)}
+.work-scene--step-1 .scene-technician__arm--front{animation:technician-repair 750ms ease-in-out infinite alternate}
+.work-scene--step-2 .scene-technician__arm--front{transform:rotate(-80deg)}
+.scene-desk{position:absolute;right:15%;bottom:44px;width:142px;height:127px;z-index:2}
+.scene-desk__surface{position:absolute;left:0;right:0;bottom:39px;height:9px;border-radius:4px;background:#518575}
+.scene-desk__leg{position:absolute;left:12px;right:12px;bottom:0;height:40px;border-left:7px solid #86ad9b;border-right:7px solid #86ad9b}
+.scene-device{position:absolute;bottom:48px;left:22px;width:100px;height:94px;display:grid;place-items:center;color:#316d59}
+.scene-device__scan{position:absolute;left:12px;right:12px;top:23px;height:3px;background:#17ae76;box-shadow:0 0 9px #28c780;opacity:0}
+.work-scene--step-1 .scene-device__scan{animation:scene-scan 1400ms ease-in-out infinite;opacity:1}
+.scene-receipt{position:absolute;top:57px;left:33px;width:33px;height:46px;background:white;border:1px solid #bad8c7;box-shadow:0 3px 4px #295c3910;display:flex;flex-direction:column;gap:4px;padding:7px;transform:scaleY(.05);transform-origin:top;opacity:0}
+.scene-receipt i{height:2px;background:#b2cbbb;width:100%}
+.scene-receipt svg{color:#00965a;align-self:center}
+.work-scene--step-2 .scene-receipt{animation:scene-print 2200ms ease-out both}
+.scene-screen{position:absolute;top:22px;left:23px;width:54px;height:34px;display:flex;align-items:end;gap:5px;padding:6px;background:#e9f8ef}
+.scene-screen i{flex:1;height:50%;background:#51ac86;border-radius:2px}
+.scene-screen i:nth-child(2){height:85%}.scene-screen i:nth-child(3){height:65%}
+.work-scene--step-1 .scene-screen i{animation:scene-diagnose 850ms ease-in-out infinite alternate}
+.work-scene--step-1 .scene-screen i:nth-child(2){animation-delay:200ms}
+.work-scene--step-2 .scene-screen{background:#d3f1de}
+.work-scene--network .scene-screen,.work-scene--mail .scene-screen{display:none}
+.scene-network-signal{position:absolute;top:14px;left:15px;display:flex;gap:6px}
+.scene-network-signal i{width:9px;height:9px;border-radius:50%;background:#06a56b;animation:scene-signal 1000ms infinite alternate}
+.scene-network-signal i:nth-child(2){animation-delay:300ms}.scene-network-signal i:nth-child(3){animation-delay:600ms}
+.scene-mail{position:absolute;top:38px;left:38px;color:#059c61}
+.work-scene--step-2 .scene-mail{animation:scene-send 2100ms ease-in-out infinite}
+.scene-task-bubble{position:absolute;left:35%;top:21px;display:grid;place-items:center;width:39px;height:34px;border-radius:10px;background:white;border:1px solid #cde7d7;color:#079459;box-shadow:0 3px 6px #2e664509}
+.scene-task-bubble:after{content:'';position:absolute;bottom:-5px;left:10px;width:8px;height:8px;background:white;border-bottom:1px solid #cde7d7;transform:rotate(45deg)}
+.scene-thinking{display:flex;gap:3px}.scene-thinking i{width:4px;height:4px;background:#169666;border-radius:50%;animation:scene-signal 600ms infinite alternate}.scene-thinking i:nth-child(2){animation-delay:200ms}.scene-thinking i:nth-child(3){animation-delay:400ms}
+.scene-location{position:absolute;right:16%;top:11px;font-size:10px;font-weight:600;color:#57786b;background:#ffffffb0;border:1px solid #d7e9de;padding:3px 8px;border-radius:5px}
+.work-scene figcaption{display:flex;align-items:center;gap:10px;background:#ffffffc9;border-top:1px solid #dbecdf;padding:12px 16px;font-size:12px;color:#315a47;min-height:58px;line-height:1.5}
+.scene-step-count{font-size:10px;white-space:nowrap;color:#00844e;background:#e2f5e9;padding:3px 6px;border-radius:4px;font-weight:700}
+.scene-step-picker{list-style:none;display:flex;justify-content:center;gap:8px;margin:0 0 9px}
+.scene-step-picker button{width:29px;height:29px;background:#f0f6f2;border-radius:50%;font-size:11px;color:#799084;border:1px solid #e0eae3}
+.scene-step-picker button[aria-pressed=true]{background:var(--green);color:white;border-color:var(--green)}
+.technician-scene__caption{font-size:10px;color:#72877b;text-align:center;line-height:1.7}
+.work-scene--paused *{animation-play-state:paused!important}
+@keyframes technician-approach{from{transform:translateX(-27px)}to{transform:translateX(37px)}}
+@keyframes technician-walk{from{transform:rotate(-13deg)}to{transform:rotate(13deg)}}
+@keyframes technician-repair{from{transform:rotate(-66deg)}to{transform:rotate(-97deg)}}
+@keyframes scene-print{0%{transform:translateY(-5px) scaleY(.05);opacity:0}15%{opacity:1}100%{transform:translateY(5px) scaleY(1);opacity:1}}
+@keyframes scene-scan{0%,100%{transform:translateY(0);opacity:.2}50%{transform:translateY(35px);opacity:1}}
+@keyframes scene-diagnose{from{transform:scaleY(.35)}to{transform:scaleY(1)}}
+@keyframes scene-signal{from{opacity:.25}to{opacity:1}}
+@keyframes scene-send{0%{transform:translateX(0);opacity:1}80%,100%{transform:translate(48px,-25px);opacity:0}}
+@media(max-width:540px){.technician-scene__heading h2{font-size:15px}.technician-scene__eyebrow{font-size:10px}.work-scene__drawing{height:205px}.scene-technician{left:12%}.scene-desk{right:5%;width:125px}.scene-task-bubble{left:30%}.scene-location{right:7%}.technician-scene__controls{gap:0}.technician-scene__controls .icon-button{min-width:28px;padding:4px}.work-scene figcaption{font-size:11px;padding:11px}.technician-scene__caption{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.work-scene *{animation:none!important;transition:none!important}.work-scene--step-2 .scene-receipt{transform:scaleY(1);opacity:1}}

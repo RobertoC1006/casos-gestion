@@ -1,0 +1,9 @@
+import type { NewIncident } from './incidents'
+
+export const INCIDENT_EXAMPLES: { id: string; label: string; input: NewIncident }[] = [
+  { id: 'printer', label: 'La impresora no emite comprobantes', input: { reporter: 'Ana Torres', area: 'Caja 01', service: 'Impresión de comprobantes', title: 'La impresora no emite comprobantes', description: 'La impresora está encendida, pero los comprobantes quedan en espera y no se imprimen.', impact: 1, urgency: 3 } },
+  { id: 'sales', label: 'El sistema de ventas está lento', input: { reporter: 'Luis Pérez', area: 'Caja 02', service: 'Sistema de ventas', title: 'El sistema de ventas responde lento', description: 'Al buscar productos y registrar una venta, el sistema tarda demasiado. La atención puede continuar con dificultad.', impact: 1, urgency: 2 } },
+  { id: 'network', label: 'No hay conexión en almacén', input: { reporter: 'Rosa Díaz', area: 'Almacén', service: 'Conectividad', title: 'El equipo de almacén no tiene conexión a la red', description: 'El equipo no se conecta a la red y no permite consultar el inventario. El cable está conectado, pero el indicador de conexión no enciende.', impact: 1, urgency: 3 } },
+  { id: 'mail', label: 'El correo no envía mensajes', input: { reporter: 'Elena Ramos', area: 'Administración', service: 'Correo empresarial', title: 'El correo empresarial no envía mensajes', description: 'Los mensajes quedan en la bandeja de salida y aparece un error de conexión. No podemos enviar las confirmaciones a nuestros proveedores.', impact: 1, urgency: 2 } },
+  { id: 'equipment', label: 'La computadora de caja no responde', input: { reporter: 'Mario Salas', area: 'Caja 01', service: 'Equipos de trabajo', title: 'La computadora de caja se queda congelada', description: 'La computadora no responde al teclado ni al mouse después de encenderla. No podemos abrir el sistema ni atender ventas en esta caja.', impact: 1, urgency: 3 } },
+]
